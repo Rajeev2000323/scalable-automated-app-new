@@ -2,115 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>🚀 Scalable DevOps Deployment</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
+  <title>DevOps Deployment Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
+      font-family: 'Share Tech Mono', monospace;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 2rem 1rem;
       text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 255, 255, 0.2);
     }
 
-    h1, h2, h3 {
-      font-family: 'Orbitron', sans-serif;
-      margin: 0.5em 0;
+    header h1 {
+      font-size: 2.8rem;
+      color: #00e6e6;
+      margin: 0;
+      text-shadow: 0 0 10px #00e6e6;
     }
 
-    h1 {
-      font-size: 3.2rem;
-      color: #00ffe7;
-      text-shadow: 0 0 10px #00ffe7;
-    }
-
-    h2 {
-      font-size: 1.6rem;
-      color: #ffffff;
-    }
-
-    h3 {
+    header h2 {
+      margin-top: 0.5rem;
       font-size: 1.2rem;
-      color: #bbbbbb;
+      color: #cccccc;
     }
 
-    .container {
-      padding: 60px 20px;
+    .banner {
+      background-image: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      border-top: 3px solid #00e6e6;
+      border-bottom: 3px solid #00e6e6;
+    }
+
+    main {
+      padding: 2rem 1rem;
       max-width: 1000px;
       margin: auto;
     }
 
     .card {
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 255, 231, 0.2);
-      margin: 30px 0;
+      background-color: #1e1e1e;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-left: 5px solid #00e6e6;
+      box-shadow: 0 0 10px rgba(0, 230, 230, 0.2);
     }
 
-    .highlight {
-      color: #00ffe7;
-      font-weight: bold;
+    .card h3 {
+      margin-top: 0;
+      color: #00e6e6;
     }
 
-    .banner {
-      background: url('https://cdn.pixabay.com/photo/2017/06/14/02/59/laptop-2402210_1280.jpg') center/cover no-repeat;
-      height: 300px;
-      border-top: 4px solid #00ffe7;
-      border-bottom: 4px solid #00ffe7;
+    .card p {
+      line-height: 1.6;
     }
 
     footer {
-      margin-top: 40px;
-      padding: 20px;
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 1rem;
       font-size: 0.9rem;
       color: #888;
+      border-top: 1px solid #333;
     }
 
     @media (max-width: 600px) {
-      h1 {
+      header h1 {
         font-size: 2rem;
       }
 
-      h2 {
-        font-size: 1.2rem;
-      }
-
-      .card {
-        padding: 20px;
+      .banner {
+        height: 200px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="banner"></div>
+<header>
+  <h1>DevOps Deployment Dashboard</h1>
+  <h2>Built with AWS CodeBuild, CodeDeploy, and CodePipeline</h2>
+</header>
 
-  <div class="container">
-    <h1>Scalable and Automated Web Deployment on AWS</h1>
-    <h2>Deployed using AWS CodeBuild, CodeDeploy, and CodePipeline</h2>
-    <h3>Build ID: <span class="highlight">{{CODEBUILD_BUILD_NUMBER}}</span></h3>
+<div class="banner"></div>
 
-    <div class="card">
-      <h3>🚀 About This Deployment</h3>
-      <p>This futuristic web application showcases how DevOps practices can automate infrastructure provisioning, code deployment, and continuous delivery at scale. Built entirely on <span class="highlight">AWS</span> using native CI/CD tools, this solution highlights the power of CodePipeline, CodeBuild, and CodeDeploy.</p>
-    </div>
-
-    <div class="card">
-      <h3>🧠 What is DevOps?</h3>
-      <p>DevOps is more than a buzzword—it's a transformative culture. It bridges the gap between development and operations through automation, monitoring, and collaboration. In this deployment, DevOps principles ensure <span class="highlight">fast, reliable, and repeatable</span> release cycles.</p>
-    </div>
-
-    <div class="card">
-      <h3>☁️ Why Cloud Matters</h3>
-      <p>Cloud computing allows on-demand scalability, high availability, and cost-efficiency. Paired with DevOps, it creates the backbone of modern software delivery pipelines. Services like EC2, S3, Lambda, and CodePipeline are essential tools for today's developers.</p>
-    </div>
+<main>
+  <div class="card">
+    <h3>🔧 Scalable and Automated Deployment</h3>
+    <p>This dynamic dashboard represents a live deployment powered by modern DevOps principles and cloud-native technologies. Leveraging AWS services like CodePipeline, CodeBuild, and CodeDeploy, the system enables seamless CI/CD and supports zero-downtime deployments using a Blue/Green strategy.</p>
+    <p><strong>Build ID:</strong> {{CODEBUILD_BUILD_NUMBER}}</p>
   </div>
 
-  <footer>
-    &copy; 2024 | Deployed by AWS CodePipeline | Designed for DevOps learning
-  </footer>
+  <div class="card">
+    <h3>🚀 What is DevOps?</h3>
+    <p>DevOps is a cultural and technical movement that emphasizes collaboration between software development and IT operations teams. Its goal is to shorten the development lifecycle while delivering features, fixes, and updates frequently in close alignment with business objectives.</p>
+  </div>
+
+  <div class="card">
+    <h3>☁️ The Role of Cloud Computing</h3>
+    <p>Cloud computing, especially platforms like AWS, provides the elasticity and scalability needed for DevOps to thrive. From infrastructure provisioning with IaC to serverless computing, the cloud simplifies automation and enables rapid innovation at scale.</p>
+  </div>
+
+  <div class="card">
+    <h3>🎓 DevOps for Students & Beginners</h3>
+    <p>Learning DevOps today means equipping yourself with real-world skills in automation, monitoring, deployment, and cloud technologies. It's a must-have for any aspiring developer or IT professional aiming to thrive in modern software delivery environments.</p>
+  </div>
+</main>
+
+<footer>
+  &copy; 2024 | AWS DevOps Sample Project | For Learning & Demonstration Purposes
+</footer>
 
 </body>
 </html>
