@@ -2,47 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>🚀 DevOps Deployment | Scalable & Automated</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <title>🚀 Scalable DevOps Deployment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Orbitron', sans-serif;
+      font-family: 'Roboto', sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #00ffe7;
+      color: #ffffff;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100vh;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+      margin: 0.5em 0;
     }
 
     h1 {
-      font-size: 3.5rem;
-      margin-bottom: 0.2em;
-      text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+      font-size: 3.2rem;
+      color: #00ffe7;
+      text-shadow: 0 0 10px #00ffe7;
     }
 
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5em;
+      font-size: 1.6rem;
       color: #ffffff;
     }
 
     h3 {
       font-size: 1.2rem;
-      color: #aaa;
+      color: #bbbbbb;
     }
 
-    .glow-box {
-      border: 2px solid #00ffe7;
-      padding: 2em;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 255, 231, 0.4);
-      max-width: 800px;
+    .container {
+      padding: 60px 20px;
+      max-width: 1000px;
       margin: auto;
-      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 231, 0.2);
+      margin: 30px 0;
+    }
+
+    .highlight {
+      color: #00ffe7;
+      font-weight: bold;
+    }
+
+    .banner {
+      background: url('https://cdn.pixabay.com/photo/2017/06/14/02/59/laptop-2402210_1280.jpg') center/cover no-repeat;
+      height: 300px;
+      border-top: 4px solid #00ffe7;
+      border-bottom: 4px solid #00ffe7;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
     }
 
     @media (max-width: 600px) {
@@ -54,18 +77,40 @@
         font-size: 1.2rem;
       }
 
-      .glow-box {
-        padding: 1em;
+      .card {
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="glow-box">
-    <h1>⚙️ DevOps Deployed!</h1>
-    <h2>Scalable & Automated Web Deployment on AWS</h2>
-    <h3>CI/CD with CodeBuild | CodeDeploy | CodePipeline</h3>
-    <h3>🔁 Build: {{CODEBUILD_BUILD_NUMBER}}</h3>
+
+  <div class="banner"></div>
+
+  <div class="container">
+    <h1>Scalable and Automated Web Deployment on AWS</h1>
+    <h2>Deployed using AWS CodeBuild, CodeDeploy, and CodePipeline</h2>
+    <h3>Build ID: <span class="highlight">{{CODEBUILD_BUILD_NUMBER}}</span></h3>
+
+    <div class="card">
+      <h3>🚀 About This Deployment</h3>
+      <p>This futuristic web application showcases how DevOps practices can automate infrastructure provisioning, code deployment, and continuous delivery at scale. Built entirely on <span class="highlight">AWS</span> using native CI/CD tools, this solution highlights the power of CodePipeline, CodeBuild, and CodeDeploy.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧠 What is DevOps?</h3>
+      <p>DevOps is more than a buzzword—it's a transformative culture. It bridges the gap between development and operations through automation, monitoring, and collaboration. In this deployment, DevOps principles ensure <span class="highlight">fast, reliable, and repeatable</span> release cycles.</p>
+    </div>
+
+    <div class="card">
+      <h3>☁️ Why Cloud Matters</h3>
+      <p>Cloud computing allows on-demand scalability, high availability, and cost-efficiency. Paired with DevOps, it creates the backbone of modern software delivery pipelines. Services like EC2, S3, Lambda, and CodePipeline are essential tools for today's developers.</p>
+    </div>
   </div>
+
+  <footer>
+    &copy; 2024 | Deployed by AWS CodePipeline | Designed for DevOps learning
+  </footer>
+
 </body>
 </html>
